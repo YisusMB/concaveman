@@ -5,6 +5,10 @@ var Queue = require('tinyqueue');
 var pointInPolygon = require('point-in-polygon');
 const orient = require('robust-predicates/umd/orient2d.min.js').orient2d;
 
+if (Queue.default) {
+    Queue = Queue.default
+}
+
 module.exports = concaveman;
 module.exports.default = concaveman;
 
